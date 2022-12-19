@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<!-- Constraint Layout - All Views are connected
+-> Responsive Design
+-> Can also drag and drop easily
+->
+-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/btnTopLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnTopRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bottom Left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBottomRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bottom Right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBelowTopLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Below Top Left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTopLeft" />
+
+    <Button
+        android:id="@+id/btnBelowTopRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Below Top Right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnTopRight" />
+
+    <Button
+        android:id="@+id/btnAboveBottomLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Above Bottom Left"
+        app:layout_constraintBottom_toTopOf="@+id/btnBottomLeft"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnAboveBottomRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Above Bottom Right"
+        app:layout_constraintBottom_toTopOf="@+id/btnBottomRight"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCenterLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Centered"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/btnBelowTopLeft"
+        app:layout_constraintStart_toStartOf="@+id/btnBelowTopLeft"
+        app:layout_constraintTop_toBottomOf="@+id/btnBelowTopLeft" />
+
+    <TextView
+        android:id="@+id/tvCenterRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Centered"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnBelowTopRight"
+        app:layout_constraintTop_toBottomOf="@+id/btnBelowTopRight" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

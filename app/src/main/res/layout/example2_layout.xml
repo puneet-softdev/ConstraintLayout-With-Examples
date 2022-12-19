@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ivFoodItem"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/burger"
+        />
+
+    <TextView
+        android:id="@+id/tvFoodItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="Chicken, Bacon and Ranch Pizza"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvItemPrice"
+        app:layout_constraintStart_toEndOf="@+id/ivFoodItem"
+        app:layout_constraintTop_toTopOf="@+id/ivFoodItem" />
+
+    <TextView
+        android:id="@+id/tvItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@id/tvFoodItemName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="$15.99" />
+
+    <TextView
+        android:id="@+id/cartItemOriginalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="2dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemPrice"
+        android:text="$15.99" />
+
+    <ImageView
+        android:id="@+id/tvStrikeThrough"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:importantForAccessibility="no"
+        android:scaleType="fitXY"
+        android:src="@drawable/price_strike_chalk_light"
+        app:layout_constraintBottom_toBottomOf="@+id/cartItemOriginalPrice"
+        app:layout_constraintEnd_toEndOf="@+id/cartItemOriginalPrice"
+        app:layout_constraintStart_toStartOf="@+id/cartItemOriginalPrice"
+        app:layout_constraintTop_toTopOf="@+id/cartItemOriginalPrice" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="14dp"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="2"
+        android:text="Large Burger Bread Roll"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivFoodItem"
+        app:layout_constraintEnd_toStartOf="@id/btnAdd"
+        app:layout_constraintStart_toEndOf="@+id/ivFoodItem"
+        app:layout_constraintTop_toBottomOf="@+id/tvFoodItemName" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/red"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="@+id/cartItemOriginalPrice"
+        app:layout_constraintTop_toBottomOf="@+id/cartItemOriginalPrice" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

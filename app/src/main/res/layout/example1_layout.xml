@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/whitish"
+    >
+
+    <ImageView
+        android:id="@+id/ivVisaLogo"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:duplicateParentState="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_cc_logo_visa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvCCNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:duplicateParentState="true"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/ivVisaLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="****1012" />
+
+    <TextView
+        android:id="@+id/credit_card_expiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingEnd="4dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tvCCNumber"
+        app:layout_constraintTop_toBottomOf="@+id/tvCCNumber"
+        tools:ignore="RtlSymmetry"
+        tools:text="Exp. 12/19" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
